@@ -180,7 +180,7 @@ async function workerLoop(workerId) {
     await processOnePair(pair, workerId);
     if (!running) break;
 
-    const cooldown = randInt(60, 80);
+    const cooldown = randInt(80, 120);
     log(`#${workerId} 冷卻 ${cooldown}s 後挑下一列`);
     await sleep(cooldown * 1000);
   }
