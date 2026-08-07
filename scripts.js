@@ -139,14 +139,14 @@ async function processOnePair(pair, workerId) {
   // 來源
   try { win.location.href = src; } catch {}
 
-  const wait1 = randInt(70, 100);
+  const wait1 = randInt(50, 70);
   log(`#${workerId} 等待 ${wait1}s 後跳轉到目的地`);
   await sleep(wait1 * 1000);
 
   if (!running || win.closed) return;
   try { win.location.href = destUrl; } catch {}
 
-  const wait2 = randInt(80, 140);
+  const wait2 = randInt(60, 90);
   log(`#${workerId} 已跳轉，等待 ${wait2}s 後關閉`);
   await sleep(wait2 * 1000);
 
